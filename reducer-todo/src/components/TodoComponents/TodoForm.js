@@ -25,7 +25,6 @@ class TodoForm extends React.Component {
     // class property to submit form
     handleSubmit = e => {
         e.preventDefault();
-        // this.props.addTodo(this.state.todoText);
         this.setState({
             todoText: ''
         });
@@ -33,7 +32,6 @@ class TodoForm extends React.Component {
 
     handleSubmit2 = e => {
         e.preventDefault();
-        // this.props.clearCompleted();
     };
 
     render() {

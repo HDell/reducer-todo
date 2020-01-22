@@ -31,14 +31,3 @@ export const reducer = (newState, action) => {
             return newState;
     }
 };
-
-// const Title = () => {
-//     const [state, dispatch] = useReducer(titleReducer, initialState); //dispatch = function
-//     const [newTitleText, setNewTitleText] = useState(); //useState(state.title) keeps value in input field
-//
-//     return (
-//         <div>
-//
-//         </div>
-//     );
-// };
