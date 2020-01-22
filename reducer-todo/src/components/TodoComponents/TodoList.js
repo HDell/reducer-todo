@@ -16,9 +16,9 @@ class TodoList extends React.Component {
             <div className="todo-list">
             {this.props.todos.map((elem) => (
                     <Todo key={elem.id} todo={elem} dispatch={this.props.dispatch} />
-    ))}
-    </div>
-    );
+            ))}
+            </div>
+        );
     }
 };
 
