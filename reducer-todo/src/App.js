@@ -18,7 +18,7 @@ const App = () => {
     return (
         <div className="main-app">
             <h2>Welcome to your Todo App!</h2>
-            <TodoList todos={todoList} dispatch={dispatch}/>
+            <TodoList todoList={todoList} dispatch={dispatch}/>
             <TodoForm dispatch={dispatch} />
         </div>
     )
