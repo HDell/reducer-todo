@@ -23,18 +23,24 @@ export const reducer = (newState, action) => {
                 ]
             };
         case "CLEAR_COMPLETED":
-            return newState.todos.filter((elem) => !elem.completed);
+            return {
+                ...newState,
+                todos: newState.todos.filter((elem) => !elem.completed)
+            };
         case "TOGGLE_COMPLETE":
-            return newState.todos.map((elem) => {
-                if (elem.id === action.payload) {
-                    return {
-                        ...elem,
-                        completed: !elem.completed
+            return {
+                ...newState,
+                todos: newState.todos.map((elem) => {
+                    if (elem.id === action.payload) {
+                        return {
+                            ...elem,
+                            completed: !elem.completed
+                        }
+                    } else {
+                        return elem;
                     }
-                } else {
-                    return elem;
-                }
-            });
+                })
+            };
         default:
             return newState;
     }
